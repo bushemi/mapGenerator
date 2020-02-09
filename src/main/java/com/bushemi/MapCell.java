@@ -3,7 +3,7 @@ package com.bushemi;
 public class MapCell {
     private int x = 0;
     private int y = 0;
-    private boolean isPassable = false;
+    private boolean isPassable = true;
 
     public MapCell(int x, int y) {
         this.x = x;
