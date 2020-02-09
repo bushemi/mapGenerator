@@ -30,7 +30,7 @@ public class Map2DTest {
         long maxX = map.getMaxX();
 
         //then
-        assertEquals(SIZE_X , maxX);
+        assertEquals(SIZE_X, maxX);
     }
 
     @Test
@@ -43,5 +43,31 @@ public class Map2DTest {
 
         //then
         assertEquals(SIZE_Y, maxY);
+    }
+
+    @Test
+    public void regenerateObstacles() {
+        //given
+        Map2D map = new Map2D(20, 20);
+
+        //when
+        map.regenerateObstacles(25);
+
+        //then
+        int count = countObstacles(map);
+        assertEquals(100, count);
+    }
+
+    private int countObstacles(Map2D map) {
+        int count = 0;
+        for (int x = 0; x < map.getMaxX(); x++) {
+            for (int y = 0; y < map.getMaxY(); y++) {
+                MapCell mapCell = map.getMapCell(x, y);
+                if (!mapCell.isPassable()) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
