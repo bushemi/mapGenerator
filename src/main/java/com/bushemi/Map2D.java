@@ -13,6 +13,9 @@ public class Map2D {
                 map[x][y] = new MapCell(x, y);
             }
         }
+        mapSize = lengthX * lengthY;
+        maxX = lengthX;
+        maxY = lengthY;
     }
 
     public MapCell getMapCell(int x, int y) {
@@ -20,5 +23,17 @@ public class Map2D {
             return map[x][y];
         }
         throw new RuntimeException("not valid coordinates.");
+    }
+
+    public long getMapSize() {
+        return mapSize;
+    }
+
+    public int getMaxX() {
+        return map.length;
+    }
+
+    public int getMaxY() {
+        return map[1].length;
     }
 }
