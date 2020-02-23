@@ -8,6 +8,13 @@
     <artifactId>mapGenerator</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <!-- Main properties -->
+        <jdk.version>1.8</jdk.version>
+        <maven-compiler-plagin.version>3.7.0</maven-compiler-plagin.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -16,13 +23,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <properties>
-
-        <!-- Main properties -->
-        <jdk.version>1.8</jdk.version>
-        <maven-compiler-plagin.version>3.7.0</maven-compiler-plagin.version>
-    </properties>
 
     <build>
         <plugins>
