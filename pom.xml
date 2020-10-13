@@ -12,7 +12,7 @@
         <!-- Main properties -->
         <jdk.version>1.8</jdk.version>
         <maven-compiler-plagin.version>3.7.0</maven-compiler-plagin.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
